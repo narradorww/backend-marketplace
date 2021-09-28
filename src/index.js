@@ -1,8 +1,20 @@
 const express = require('express')
 const app = express();
+const cors = require('cors');
+const morgan = require('morgan');
+
+//database
+require('./database');
+
+app.set('port', process.env.PORT || 8000);
+app.use(cors());
+app.use(morgan('dev'));
+app.use(express.json());
+
+app.use('/', require('./routes/main.routes'));
 
 
 
-app.listen(8000, ()=>{
-    console.log("server is UP")
+app.listen(app.get('port'),() => {
+    console.log("O servidor está On");
 });
