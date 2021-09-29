@@ -1,4 +1,7 @@
-const mongoose = require('mongoose');
-const  URI ='mongodb://localhost/balaio'
+const mongoose = require("mongoose");
+const URI = "mongodb://localhost/balaio";
 
-mongoose.connect(URI).then(()=> console.log('DB subiu caramba!')).catch((err)=> console.log(err))
+mongoose
+  .connect(URI)
+  .then(() => console.log("DB subiu caramba!"))
+  .catch((err) => console.log(err));

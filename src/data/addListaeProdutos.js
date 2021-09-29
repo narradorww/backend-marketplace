@@ -1,5 +1,5 @@
 const Lista = require('../models/lista')
-const Produtos = require('../models/produto')
+const Produto = require('../models/produto')
 const balaio= require('./balaio.json')
 
 //database
